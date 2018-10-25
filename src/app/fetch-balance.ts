@@ -11,12 +11,18 @@ interface EtherscanResponseBody {
 const getPath = (req: IncomingMessage) =>
 	(parsed => parsed.pathname)(parse(req.url || ''))
 
-const fetch = async <T>(
-	address?: T
+const fetch = async (
+	address?: string
 ): Promise<EtherscanResponseBody | undefined> =>
 	address
 		? requestPromise(
-				`https://welg1mzug8.execute-api.us-east-1.amazonaws.com/prototype/?address=${address}`
+				`https://welg1mzug8.execute-api.us-east-1.amazonaws.com/prototype/?address=${address.replace(
+					/\//g,
+					''
+				)}`,
+				{
+					json: true
+				}
 		  )
 		: undefined
 
