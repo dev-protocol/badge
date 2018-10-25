@@ -25,6 +25,7 @@
 	"dependencies": {
 		"get-port": "^4.0.0",
 		"micro": "^9.3.3",
+		"request": "^2.88.0",
 		"request-promise": "^4.2.2"
 	},
 	"devDependencies": {
