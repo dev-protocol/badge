@@ -1,33 +1,15 @@
 import { IncomingMessage } from 'http'
 import { parse } from 'url'
-import * as requestPromise from 'request-promise'
-
-interface EtherscanResponseBody {
-	readonly status: number
-	readonly message: string
-	readonly result: number
-}
+import { getBalanceDev } from 'dev-distribution/src/libs'
+import { AddressBalance } from 'dev-distribution/src/types'
 
 const getPath = (req: IncomingMessage) =>
 	(parsed => parsed.pathname)(parse(req.url || ''))
 
-const fetch = async (
-	address?: string
-): Promise<EtherscanResponseBody | undefined> =>
-	address
-		? requestPromise(
-				`https://welg1mzug8.execute-api.us-east-1.amazonaws.com/prototype/?address=${address.replace(
-					/\//g,
-					''
-				)}`,
-				{
-					json: true
-				}
-		  )
-		: undefined
+const fetch = async (address?: string): Promise<AddressBalance | undefined> =>
+	address ? getBalanceDev(address.replace(/\//g, '')) : undefined
 
-const balance = (data?: EtherscanResponseBody) =>
-	data ? data.result : undefined
+const balance = (data?: AddressBalance) => (data ? data.balance : undefined)
 
 export const fetchBalance = async (req: IncomingMessage) => {
 	const path = getPath(req)
