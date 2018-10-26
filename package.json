@@ -5,7 +5,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "mocha",
+		"start": "node ./build",
+		"prestart": "npm run build",
+		"test": "mocha ./build/**/*.test.js",
 		"pretest": "npm run build",
 		"build": "tsc -p ./",
 		"prebuild": "npm run lint",
