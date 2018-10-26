@@ -3,6 +3,11 @@ import metric_suffix = require('metric-suffix')
 import BigNumber from 'bignumber.js'
 import * as stringPixelWidth from 'string-pixel-width'
 
+interface Props {
+	readonly balance: string
+	readonly width: number
+}
+
 const font = 'Verdana'
 const fontSize = 11
 const toStr = (num: number) => new BigNumber(num).toString(10)
@@ -19,7 +24,7 @@ const below1000 = (num: number) =>
 	})(slice(toStr(num), 6))
 const friendlyNumber = (num: number) =>
 	num > 999 ? metric_suffix(num, 3) : below1000(num)
-const genProps = (num: number) =>
+const genProps = (num: number): Props =>
 	(balance => ({
 		balance,
 		width: pixel(balance)
@@ -27,9 +32,7 @@ const genProps = (num: number) =>
 
 const pathTransform = (width: number) => (width > 38 ? 0 : 0 - width + 15)
 
-export const svg = (num?: number) =>
-	num
-		? (props => `
+const createSVG = (props: Props) => `
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Dev_Badge" x="0px" y="0px" viewBox="0 0 90 20" style="enable-background:new 0 0 90 20;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#231F20;}
@@ -51,8 +54,8 @@ export const svg = (num?: number) =>
 	<path class="st2" d="M28.7,7.9l-2.5,5.9h-1.8L22,7.9h1.8l1.6,4l1.7-4C27.1,7.9,28.7,7.9,28.7,7.9z"/>
 </g>
 <text transform="matrix(1 0 0 1 43 14.5)" class="st2 st3 st4">${
-				props.balance
-		  }</text>
+	props.balance
+}</text>
 <linearGradient id="Gradient_1_" gradientUnits="userSpaceOnUse" x1="-3.051758e-05" y1="19.1596" x2="37" y2="19.1596">
 	<stop offset="0" style="stop-color:#00EBFF"/>
 	<stop offset="0.35" style="stop-color:#F200DF"/>
@@ -60,5 +63,6 @@ export const svg = (num?: number) =>
 </linearGradient>
 <path id="Gradient" class="st5" d="M3,20h34v-1.7H0.3C0.8,19.3,1.8,20,3,20z"/>
 </svg>
-`)(genProps(num))
-		: num
+`
+
+export const svg = (num?: number) => (num ? createSVG(genProps(num)) : num)
