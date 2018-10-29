@@ -1,0 +1,4 @@
+{
+	"alias": "dev-badges",
+	"files": ["src", ".prettierrc.json", "tsconfig.json", "tslint.json"]
+}
