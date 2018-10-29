@@ -26,8 +26,13 @@ const below1000 = (num: number) =>
 			? sliced
 			: sliced.replace(/.$/, '+')
 	})(slice(toStr(num), length))
+const suffix = (num: number) => (precision: number) =>
+	metric_suffix(num, precision)
+const iso = (fn: ((num: number) => string)) =>
+	((less, more) => (less === more ? less : `${less}+`))(fn(3), fn(99))
 const friendlyNumber = (num: number) =>
-	num > 1000 ? metric_suffix(num, 3) : below1000(num)
+	num > 1000 ? iso(suffix(num)) : below1000(num)
+
 const genProps = (num: number): Props =>
 	(balance => ({
 		balance,
