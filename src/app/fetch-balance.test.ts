@@ -10,13 +10,9 @@ const mockRequest = (url: string) => ({ url } as IncomingMessage)
 describe('fetch-balance', () => {
 	describe('Get the number of tokens for the specified address', () => {
 		it('Valid address', async () => {
-			const balance = await fetchBalance(
-				mockRequest(
-					'http://localhost/0xE23fe51187A807d56189212591F5525127003bdf'
-				)
-			)
+			const balance = await fetchBalance(mockRequest('http://localhost/chalk'))
 			const expected = await getBalanceDev(
-				'0xE23fe51187A807d56189212591F5525127003bdf'
+				'0xfb5c0e6400a95e4191d46196073d30a289abd15c'
 			)
 			strictEqual(balance, expected.balance)
 		})
@@ -33,11 +29,7 @@ describe('fetch-balance', () => {
 			)
 
 			strictEqual(
-				await fetchBalance(
-					mockRequest(
-						'http://localhost/xxE23fe51187A807d56189212591F5525127003bdf'
-					)
-				),
+				await fetchBalance(mockRequest('http://localhost/n')),
 				undefined
 			)
 		})
