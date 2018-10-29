@@ -12,7 +12,7 @@
 		"build": "tsc -p ./",
 		"prebuild": "npm run lint",
 		"lint": "tslint --fix -p ./",
-		"format": "prettier --write '**/*.{json,md}'"
+		"format": "prettier --write '**/*.{json,md,yml}'"
 	},
 	"repository": {
 		"type": "git",
