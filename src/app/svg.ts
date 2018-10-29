@@ -12,18 +12,22 @@ const font = 'Verdana'
 const fontSize = 11
 const toStr = (num: number) => new BigNumber(num).toString(10)
 const slice = (str: string, pos: number) => str.slice(0, pos)
-const pixel = (str: string): number =>
+
+export const pixel = (str: string): number =>
 	stringPixelWidth(str, {
 		font,
 		size: fontSize
 	})
 
+const length = 6
 const below1000 = (num: number) =>
 	(sliced => {
-		return sliced.endsWith('0') ? sliced : sliced.replace(/.$/, '+')
-	})(slice(toStr(num), 6))
+		return sliced.endsWith('0') || sliced.length < length
+			? sliced
+			: sliced.replace(/.$/, '+')
+	})(slice(toStr(num), length))
 const friendlyNumber = (num: number) =>
-	num > 999 ? metric_suffix(num, 3) : below1000(num)
+	num > 1000 ? metric_suffix(num, 3) : below1000(num)
 const genProps = (num: number): Props =>
 	(balance => ({
 		balance,
@@ -32,7 +36,7 @@ const genProps = (num: number): Props =>
 
 const pathTransform = (width: number) => (width > 38 ? 0 : 0 - width + 15)
 
-const createSVG = (props: Props) => `
+export const createSVG = (props: Props) => `
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Dev_Badge" x="0px" y="0px" viewBox="0 0 90 20" style="enable-background:new 0 0 90 20;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#231F20;}
@@ -65,4 +69,4 @@ const createSVG = (props: Props) => `
 </svg>
 `
 
-export const svg = (num?: number) => (num ? createSVG(genProps(num)) : num)
+export const svg = (num?: number) => (num ? createSVG(genProps(num)) : '')
