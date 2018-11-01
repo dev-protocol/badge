@@ -1,5 +1,5 @@
 {
-	"name": "dev-badges",
+	"name": "dev-badge",
 	"private": true,
 	"version": "0.0.1",
 	"description": "",
@@ -15,14 +15,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/frame00/dev-badges.git"
+		"url": "git+https://github.com/frame00/dev-badge.git"
 	},
 	"author": "aggre",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/frame00/dev-badges/issues"
+		"url": "https://github.com/frame00/dev-badge/issues"
 	},
-	"homepage": "https://github.com/frame00/dev-badges#readme",
+	"homepage": "https://github.com/frame00/dev-badge#readme",
 	"dependencies": {
 		"bignumber.js": "^7.2.1",
 		"dev-distribution": "^0.1.1",
