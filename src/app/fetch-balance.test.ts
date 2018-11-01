@@ -15,7 +15,7 @@ describe('fetch-balance', () => {
 				'0xfb5c0e6400a95e4191d46196073d30a289abd15c'
 			)
 			strictEqual(balance, expected.balance)
-		})
+		}).timeout(10000)
 
 		it('Invalid address', async () => {
 			strictEqual(
