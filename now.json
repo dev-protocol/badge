@@ -1,4 +1,6 @@
 {
+	"version": 2,
 	"alias": "dev-badge",
-	"files": ["src", ".prettierrc.json", "tsconfig.json", "tslint.json"]
+	"builds": [{ "src": "build/index.js", "use": "@now/node-server" }],
+	"routes": [{ "src": "/(.*)", "dest": "/build/index.js" }]
 }
