@@ -1,6 +1,6 @@
 {
 	"version": 2,
 	"alias": "dev-badge",
-	"builds": [{ "src": "build/index.js", "use": "@now/node-server" }],
+	"builds": [{ "src": "build/index.js", "use": "@now/node" }],
 	"routes": [{ "src": "/(.*)", "dest": "/build/index.js" }]
 }
