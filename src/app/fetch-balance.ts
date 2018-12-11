@@ -27,7 +27,7 @@ const fetchDev = async (
 ): Promise<AddressBalance | undefined> =>
 	address && validateAddress(address) ? getBalanceDev(address) : undefined
 
-const balance = (data?: AddressBalance) => (data ? data.balance : undefined)
+const balance = (data?: AddressBalance) => (data ? data.balance : data)
 
 export const fetchBalance = async (req: IncomingMessage) => {
 	const name = getPackageNamePath(req)

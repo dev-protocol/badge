@@ -31,9 +31,9 @@ const suffix = (num: number) => (precision: number) =>
 const iso = (fn: ((num: number) => string)) =>
 	((less, more) => (less === more ? less : `${less}+`))(fn(3), fn(99))
 const friendlyNumber = (num: number) =>
-	num > 1000 ? iso(suffix(num)) : below1000(num)
+	num === 0 ? '-' : num > 1000 ? iso(suffix(num)) : below1000(num)
 
-const pathTransformX = (width: number) => (width > 38 ? 0 : 0 - width + 31)
+const pathTransformX = (width: number) => (width > 38 ? 0 : 0 - (38 - width))
 const genProps = (num: number): Props =>
 	(balance => ({
 		balance,
@@ -76,4 +76,5 @@ export const createSVG = (props: Props) =>
 </svg>
 `)(pathTransformX(props.width))
 
-export const svg = (num?: number) => (num ? createSVG(genProps(num)) : '')
+export const svg = (num?: number) =>
+	typeof num === 'number' ? createSVG(genProps(num)) : ''
