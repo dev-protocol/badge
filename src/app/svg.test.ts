@@ -4,6 +4,12 @@ import { createSVG, svg, pixel } from './svg'
 // tslint:disable:no-expression-statement no-http-string
 
 describe('svg', () => {
+	describe('When the balance is 0', () => {
+		it('output is -', () => {
+			const expect = '-'
+			strictEqual(createSVG({ balance: expect, width: pixel(expect) }), svg(0))
+		})
+	})
 	describe('Represent a numerical value with 6 or fewer characters', () => {
 		it('0.0001 is 0.000+', () => {
 			const expect = '0.000+'
