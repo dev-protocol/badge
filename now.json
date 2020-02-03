@@ -1,6 +1,6 @@
 {
 	"version": 2,
-	"alias": "badge.devtoken.rocks",
+	"alias": "badge.devprtcl.com",
 	"builds": [{ "src": "build/index.js", "use": "@now/node" }],
 	"routes": [{ "src": "/(.*)", "dest": "/build/index.js" }]
 }
