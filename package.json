@@ -1,7 +1,6 @@
 {
-	"name": "dev-badge",
+	"name": "badge",
 	"private": true,
-	"version": "0.0.1",
 	"description": "",
 	"main": "./build/index.js",
 	"scripts": {
@@ -15,14 +14,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/frame00/dev-badge.git"
+		"url": "git+https://github.com/dev-protocol/badge.git"
 	},
 	"author": "aggre",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/frame00/dev-badge/issues"
+		"url": "https://github.com/dev-protocol/badge/issues"
 	},
-	"homepage": "https://github.com/frame00/dev-badge#readme",
+	"homepage": "https://github.com/dev-protocol/badge#readme",
 	"dependencies": {
 		"bignumber.js": "^7.2.1",
 		"dev-distribution": "^0.1.1",
