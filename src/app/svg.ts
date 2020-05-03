@@ -14,36 +14,37 @@ const toStr = (num: number) => new BigNumber(num).toString(10)
 const slice = (str: string, pos: number) => str.slice(0, pos)
 
 export const pixel = (str: string): number =>
+	// tslint:disable-next-line: no-unsafe-any
 	stringPixelWidth(str, {
 		font,
-		size: fontSize
+		size: fontSize,
 	})
 
 const length = 6
 const below1000 = (num: number) =>
-	(sliced => {
+	((sliced) => {
 		return sliced.endsWith('0') || sliced.length < length
 			? sliced
 			: sliced.replace(/.$/, '+')
 	})(slice(toStr(num), length))
 const suffix = (num: number) => (precision: number) =>
 	metric_suffix(num, precision)
-const iso = (fn: ((num: number) => string)) =>
+const iso = (fn: (num: number) => string) =>
 	((less, more) => (less === more ? less : `${less}+`))(fn(3), fn(99))
 const friendlyNumber = (num: number) =>
 	num === 0 ? '-' : num > 1000 ? iso(suffix(num)) : below1000(num)
 
 const pathTransformX = (width: number) => (width > 38 ? 0 : 0 - (38 - width))
 const genProps = (num: number): Props =>
-	(balance => ({
+	((balance) => ({
 		balance,
-		width: pixel(balance)
+		width: pixel(balance),
 	}))(friendlyNumber(num))
 
 const svgWidth = (transformX: number, orig = 90) => orig + transformX
 
 export const createSVG = (props: Props) =>
-	(transformX => `
+	((transformX) => `
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Dev_Badge" x="0px" y="0px" viewBox="0 0 ${svgWidth(
 		transformX
 	)} 20" width="${svgWidth(transformX)}" height="20" xml:space="preserve">

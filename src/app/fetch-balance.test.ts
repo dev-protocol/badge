@@ -5,6 +5,7 @@ import { getBalanceDev } from 'dev-distribution/src/libs'
 
 // tslint:disable:no-expression-statement no-http-string
 
+// tslint:disable-next-line: no-object-literal-type-assertion
 const mockRequest = (url: string) => ({ url } as IncomingMessage)
 
 describe('fetch-balance', () => {

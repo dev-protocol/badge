@@ -8,17 +8,20 @@ type DistributionTargets = ReadonlyArray<DistributionTarget>
 
 const proto = 'https'
 const getPackageNamePath = (req: IncomingMessage) =>
-	(parsed => (parsed.pathname || '').replace(/^\//, ''))(parse(req.url || ''))
+	((parsed) => (parsed.pathname || '').replace(/^\//, ''))(parse(req.url || ''))
 
 const validateAddress = (address: string) =>
 	address.length === 42 && address.startsWith('0x')
 
 const fetchPackages = async (): Promise<DistributionTargets> =>
-	new Promise<DistributionTargets>(resolve =>
+	new Promise<DistributionTargets>((resolve) =>
 		get(
 			`${proto}://dev-distribution.now.sh/config/packages`,
 			{ json: true },
-			(_, __, body) => resolve(body)
+			(_, __, body) => {
+				// tslint:disable-next-line: no-expression-statement no-unsafe-any
+				resolve(body)
+			}
 		)
 	)
 
@@ -32,8 +35,8 @@ const balance = (data?: AddressBalance) => (data ? data.balance : data)
 export const fetchBalance = async (req: IncomingMessage) => {
 	const name = getPackageNamePath(req)
 	const pkgs = await fetchPackages()
-	const address = (pkg => (pkg ? pkg.address : undefined))(
-		pkgs.find(pkg => pkg.package === name)
+	const address = ((pkg) => (pkg ? pkg.address : undefined))(
+		pkgs.find((pkg) => pkg.package === name)
 	)
 	const etherscan = await fetchDev(address)
 	return balance(etherscan)
