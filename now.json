@@ -1,5 +1,8 @@
 {
 	"version": 2,
+	"github": {
+		"enabled": false
+	},
 	"builds": [{ "src": "build/index.js", "use": "@now/node" }],
 	"routes": [{ "src": "/(.*)", "dest": "/build/index.js" }]
 }
