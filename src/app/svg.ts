@@ -8,7 +8,7 @@ interface Props {
 	readonly width: number
 }
 
-const font = 'Verdana'
+const font = 'Arial' // Verdana
 const fontSize = 11
 const toStr = (num: number) => new BigNumber(num).toString(10)
 const slice = (str: string, pos: number) => str.slice(0, pos)
