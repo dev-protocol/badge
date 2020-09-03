@@ -24,7 +24,6 @@
 	"homepage": "https://github.com/dev-protocol/badge#readme",
 	"dependencies": {
 		"bignumber.js": "^9.0.0",
-		"dev-distribution": "^0.2.0",
 		"graphql": "^15.3.0",
 		"graphql-request": "^3.0.0",
 		"metric-suffix": "0.0.3",
@@ -42,8 +41,10 @@
 		"@types/node": "^13.13.4",
 		"@types/node-fetch": "^2.5.7",
 		"@types/request": "^2.48.4",
+		"@types/sinon": "^9.0.5",
 		"mocha": "^7.1.2",
 		"prettier": "^2.0.5",
+		"sinon": "^9.0.3",
 		"tslint": "^6.1.2",
 		"tslint-config-prettier": "^1.18.0",
 		"tslint-immutable": "^6.0.1",
