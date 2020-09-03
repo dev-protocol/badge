@@ -1,7 +1,7 @@
-// tslint:disable:no-expression-statement
+/* eslint-disable functional/no-expression-statement */
 import { ServerResponse } from 'http'
 
-export const setHeader = (res: ServerResponse) => {
+export const setHeader = (res: ServerResponse): ServerResponse => {
 	res.setHeader('content-type', 'image/svg+xml')
 	res.setHeader(
 		'cache-control',

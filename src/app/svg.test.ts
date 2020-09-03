@@ -1,8 +1,6 @@
 import { strictEqual } from 'assert'
 import { createSVG, svg, pixel } from './svg'
 
-// tslint:disable:no-expression-statement no-http-string
-
 describe('svg', () => {
 	describe('When the balance is 0', () => {
 		it('output is -', () => {

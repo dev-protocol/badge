@@ -1,12 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { fetchBalance } from './fetch-balance'
 import { IncomingMessage } from 'http'
 import { strictEqual } from 'assert'
 import { stub } from 'sinon'
 import * as fetch from 'node-fetch'
 
-// tslint:disable:no-expression-statement no-http-string
-
-// tslint:disable-next-line: no-object-literal-type-assertion
 const mockRequest = (url: string) => ({ url } as IncomingMessage)
 
 stub(fetch, 'default').callsFake(

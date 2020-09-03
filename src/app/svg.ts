@@ -1,17 +1,16 @@
-// tslint:disable-next-line:no-require-imports
 import metric_suffix = require('metric-suffix')
 import BigNumber from 'bignumber.js'
 import * as stringPixelWidth from 'string-pixel-width'
 
-interface Props {
+type Props = {
 	readonly balance: string
 	readonly width: number
 }
 
 const font = 'Arial' // Verdana
 const fontSize = 11
-const toStr = (num: number) => new BigNumber(num).toString(10)
-const slice = (str: string, pos: number) => str.slice(0, pos)
+const toStr = (num: number): string => new BigNumber(num).toString(10)
+const slice = (str: string, pos: number): string => str.slice(0, pos)
 
 export const pixel = (str: string): number =>
 	// tslint:disable-next-line: no-unsafe-any
@@ -21,7 +20,7 @@ export const pixel = (str: string): number =>
 	})
 
 const length = 6
-const below1000 = (num: number) =>
+const below1000 = (num: number): string =>
 	((sliced) => {
 		return sliced.endsWith('0') || sliced.length < length
 			? sliced
@@ -29,21 +28,22 @@ const below1000 = (num: number) =>
 	})(slice(toStr(num), length))
 const suffix = (num: number) => (precision: number) =>
 	metric_suffix(num, precision)
-const iso = (fn: (num: number) => string) =>
+const iso = (fn: (num: number) => string): string =>
 	((less, more) => (less === more ? less : `${less}+`))(fn(3), fn(99))
-const friendlyNumber = (num: number) =>
+const friendlyNumber = (num: number): string =>
 	num === 0 ? '-' : num > 1000 ? iso(suffix(num)) : below1000(num)
 
-const pathTransformX = (width: number) => (width > 38 ? 0 : 0 - (38 - width))
+const pathTransformX = (width: number): number =>
+	width > 38 ? 0 : 0 - (38 - width)
 const genProps = (num: number): Props =>
 	((balance) => ({
 		balance,
 		width: pixel(balance),
 	}))(friendlyNumber(num))
 
-const svgWidth = (transformX: number, orig = 90) => orig + transformX
+const svgWidth = (transformX: number, orig = 90): number => orig + transformX
 
-export const createSVG = (props: Props) =>
+export const createSVG = (props: Props): string =>
 	((transformX) => `
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Dev_Badge" x="0px" y="0px" viewBox="0 0 ${svgWidth(
 		transformX
@@ -77,5 +77,5 @@ export const createSVG = (props: Props) =>
 </svg>
 `)(pathTransformX(props.width))
 
-export const svg = (num?: number) =>
+export const svg = (num?: number): string =>
 	typeof num === 'number' ? createSVG(genProps(num)) : ''

@@ -9,7 +9,7 @@
 		"pretest": "npm run build",
 		"build": "tsc -p ./",
 		"prebuild": "npm run lint",
-		"lint": "tslint --fix -p ./",
+		"lint": "eslint . --ext .ts,.js --fix",
 		"format": "prettier --write '**/*.{json,md,yml}'"
 	},
 	"repository": {
@@ -23,12 +23,14 @@
 	},
 	"homepage": "https://github.com/dev-protocol/badge#readme",
 	"dependencies": {
+		"@types/ramda": "^0.27.14",
 		"bignumber.js": "^9.0.0",
 		"graphql": "^15.3.0",
 		"graphql-request": "^3.0.0",
 		"metric-suffix": "0.0.3",
 		"micro": "^9.3.4",
 		"node-fetch": "^2.6.0",
+		"ramda": "^0.27.1",
 		"string-pixel-width": "^1.10.0"
 	},
 	"devDependencies": {
@@ -40,14 +42,15 @@
 		"@types/node": "^13.13.4",
 		"@types/node-fetch": "^2.5.7",
 		"@types/sinon": "^9.0.5",
+		"@typescript-eslint/eslint-plugin": "^4.0.1",
+		"@typescript-eslint/parser": "^4.0.1",
+		"eslint": "^7.8.1",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-functional": "^3.0.2",
+		"eslint-plugin-prettier": "^3.1.4",
 		"mocha": "^7.1.2",
-		"prettier": "^2.0.5",
+		"prettier": "^2.1.1",
 		"sinon": "^9.0.3",
-		"tslint": "^6.1.2",
-		"tslint-config-prettier": "^1.18.0",
-		"tslint-immutable": "^6.0.1",
-		"tslint-plugin-prettier": "^2.3.0",
-		"tslint-xo": "^0.16.0",
 		"typescript": "^3.8.3"
 	}
 }
