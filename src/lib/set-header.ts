@@ -1,7 +1,7 @@
 /* eslint-disable functional/no-expression-statement */
-import { ServerResponse } from 'http'
+import { NowResponse } from '@vercel/node'
 
-export const setHeader = (res: ServerResponse): ServerResponse => {
+export const setHeader = (res: NowResponse): NowResponse => {
 	res.setHeader('content-type', 'image/svg+xml')
 	res.setHeader(
 		'cache-control',

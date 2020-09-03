@@ -5,6 +5,7 @@
 		"moduleResolution": "node",
 		"strictNullChecks": true,
 		"module": "commonjs",
-		"outDir": "build"
+		"outDir": "public",
+		"esModuleInterop": true
 	}
 }

@@ -1,15 +1,14 @@
 import { fetchBalance } from './fetch-balance'
 import { svg } from './svg'
-import { IncomingMessage, ServerResponse } from 'http'
+import { NowRequest, NowResponse } from '@vercel/node'
 import { setHeader } from '../lib/set-header'
-import { send } from 'micro'
 
 export const app = async (
-	req: IncomingMessage,
-	res: ServerResponse
-): Promise<void> => {
-	const balance = await fetchBalance(req)
+	req: NowRequest,
+	res: NowResponse
+): Promise<NowResponse> => {
+	const balance = await fetchBalance(req.query.address)
 	const body = svg(balance)
 	const response = body ? setHeader(res) : res
-	return send(response, 200, body)
+	return response.send(body)
 }

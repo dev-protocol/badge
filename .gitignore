@@ -61,6 +61,6 @@ typings/
 .next
 
 # tsc build output
-build
+public
 
 .now

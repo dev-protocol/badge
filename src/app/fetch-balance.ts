@@ -1,5 +1,3 @@
-import { IncomingMessage } from 'http'
-import { parse } from 'url'
 import { gql } from 'graphql-request'
 import fetch from 'node-fetch'
 import { always } from 'ramda'
@@ -13,9 +11,6 @@ type IPropertyLockedUpResult = {
 }
 
 const GRAPHQL_BASE_URL = 'https://api.devprtcl.com/v1/graphql'
-
-const getAddressFromPath = (req: IncomingMessage): string =>
-	((parsed) => (parsed.pathname || '').replace(/^\//, ''))(parse(req.url || ''))
 
 const getBalanceByPropertyAddress = async (
 	propertyAddress: string
@@ -50,8 +45,14 @@ const getBalanceByPropertyAddress = async (
 		)
 }
 
-export const fetchBalance = async (req: IncomingMessage): Promise<number> => {
-	const address = getAddressFromPath(req)
+export const fetchBalance = async (
+	addressFromPath?: string | readonly string[]
+): Promise<number> => {
+	const address = addressFromPath
+		? typeof addressFromPath === 'string'
+			? addressFromPath
+			: addressFromPath[0]
+		: undefined
 	const balance = address
 		? await getBalanceByPropertyAddress(address)
 		: undefined

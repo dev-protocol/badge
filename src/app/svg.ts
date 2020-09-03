@@ -1,6 +1,6 @@
-import metric_suffix = require('metric-suffix')
+import metric_suffix from 'metric-suffix'
 import BigNumber from 'bignumber.js'
-import * as stringPixelWidth from 'string-pixel-width'
+import stringPixelWidth from 'string-pixel-width'
 
 type Props = {
 	readonly balance: string

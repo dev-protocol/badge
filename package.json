@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "./build/index.js",
 	"scripts": {
-		"start": "micro",
-		"test": "mocha ./build/**/*.test.js",
+		"start": "vercel dev",
+		"test": "mocha ./public/**/*.test.js",
 		"pretest": "npm run build",
 		"build": "tsc -p ./",
 		"prebuild": "npm run lint",
@@ -25,11 +25,11 @@
 	"homepage": "https://github.com/dev-protocol/badge#readme",
 	"dependencies": {
 		"@types/ramda": "^0.27.14",
+		"@vercel/node": "^1.8.1",
 		"bignumber.js": "^9.0.0",
 		"graphql": "^15.3.0",
 		"graphql-request": "^3.0.0",
 		"metric-suffix": "0.0.3",
-		"micro": "^9.3.4",
 		"node-fetch": "^2.6.0",
 		"ramda": "^0.27.1",
 		"string-pixel-width": "^1.10.0"
@@ -38,7 +38,6 @@
 		"@types/bignumber.js": "^5.0.0",
 		"@types/get-port": "^4.2.0",
 		"@types/metric-suffix": "0.0.1",
-		"@types/micro": "^7.3.3",
 		"@types/mocha": "^8.0.3",
 		"@types/node": "^14.6.3",
 		"@types/node-fetch": "^2.5.7",
