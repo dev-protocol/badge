@@ -66,3 +66,6 @@ public
 .now
 
 .vercel
+
+# use yarn
+package-lock.json
