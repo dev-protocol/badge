@@ -29,7 +29,7 @@ const below1000 = (num: number): string =>
 const suffix = (num: number) => (precision: number) =>
 	metric_suffix(num, precision)
 const iso = (fn: (num: number) => string): string =>
-	((less, more) => (less === more ? less : `${less}+`))(fn(3), fn(99))
+	((less, more) => (less === more ? less : less))(fn(3), fn(99))
 const friendlyNumber = (num: number): string =>
 	num === 0 ? '-' : num > 1000 ? iso(suffix(num)) : below1000(num)
 

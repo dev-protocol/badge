@@ -81,8 +81,8 @@ describe('svg', () => {
 			)
 		})
 
-		it('1000.1 is 1k+', () => {
-			const expect = '1k+'
+		it('1000.1 is 1k', () => {
+			const expect = '1k'
 			strictEqual(
 				createSVG({ balance: expect, width: pixel(expect) }),
 				svg(1000.1)
@@ -97,8 +97,8 @@ describe('svg', () => {
 			)
 		})
 
-		it('1234.1 is 1.23k+', () => {
-			const expect = '1.23k+'
+		it('1234.1 is 1.23k', () => {
+			const expect = '1.23k'
 			strictEqual(
 				createSVG({ balance: expect, width: pixel(expect) }),
 				svg(1234.1)
@@ -121,8 +121,8 @@ describe('svg', () => {
 			)
 		})
 
-		it('12345 is 12.3k+', () => {
-			const expect = '12.3k+'
+		it('12345 is 12.3k', () => {
+			const expect = '12.3k'
 			strictEqual(
 				createSVG({ balance: expect, width: pixel(expect) }),
 				svg(12345)
@@ -145,8 +145,8 @@ describe('svg', () => {
 			)
 		})
 
-		it('1234567890 is 1.23G+', () => {
-			const expect = '1.23G+'
+		it('1234567890 is 1.23G', () => {
+			const expect = '1.23G'
 			strictEqual(
 				createSVG({ balance: expect, width: pixel(expect) }),
 				svg(1234567890)
@@ -169,8 +169,8 @@ describe('svg', () => {
 			)
 		})
 
-		it('12345678901230 is 12.3T+', () => {
-			const expect = '12.3T+'
+		it('12345678901230 is 12.3T', () => {
+			const expect = '12.3T'
 			strictEqual(
 				createSVG({ balance: expect, width: pixel(expect) }),
 				svg(12345678901230)
