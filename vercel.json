@@ -4,7 +4,7 @@
 			"source": "/:address/descriptive",
 			"destination": "/api/[address]/descriptive"
 		},
-		{ "source": "/:address", "destination": "/api/[address]/" }
+		{ "source": "/:address", "destination": "/api/[address]/index" }
 	],
 	"redirects": [
 		{
