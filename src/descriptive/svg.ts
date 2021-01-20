@@ -34,14 +34,14 @@ const friendlyNumber = (num: number): string =>
 	num === 0 ? '-' : num > 1000 ? iso(suffix(num)) : below1000(num)
 
 const pathTransformX = (width: number): number =>
-	width > 38 ? 0 : 0 - (38 - width)
+	width > 32 ? 0 : 0 - (32 - width)
 const genProps = (num: number): Props =>
 	((balance) => ({
 		balance,
 		width: pixel(balance),
 	}))(friendlyNumber(num))
 
-const svgWidth = (transformX: number, orig = 130): number => orig + transformX
+const svgWidth = (transformX: number, orig = 132): number => orig + transformX
 
 export const createSVG = (props: Props): string =>
 	((transformX) => `
@@ -62,7 +62,7 @@ export const createSVG = (props: Props): string =>
 	</style>
 	<g id="Background">
 		<path id="Right" transform="matrix(1 0 0 1 ${transformX} 0)" class="st0" d="M126.9,0H87.1v20h39.8c1.7,0,3-1.3,3-3V3C129.9,1.3,128.6,0,126.9,0z"/>
-		<path id="Left" d="M3,0C1.3,0,0,1.3,0,3v14c0,1.7,1.3,3,3,3h84.1V0H3z"/>
+		<path id="Left" d="M3,0C1.3,0,0,1.3,0,3v14c0,1.7,1.3,3,3,3h86.3V0H3z"/>
 	</g>
 	<g role="heading" aria-level="1" aria-label="Support on DEV">
 		<g>
@@ -82,14 +82,14 @@ export const createSVG = (props: Props): string =>
 			<path class="st1" d="M79.1,6.5h1.3l1.6,5.3c0.2,0.6,0.3,1.1,0.3,1.8h0.5c0-0.6,0.1-1.1,0.3-1.8l1.7-5.3H86l-2.6,8h-1.7L79.1,6.5z"/>
 		</g>
 	</g>
-	<text transform="matrix(1 0 0 1 89 14.5)" class="st1 st2 st3">${
+	<text transform="matrix(1 0 0 1 93 14.5)" class="st1 st2 st3">${
 		props.balance
 	}</text>
 	<g>
-		<path class="st4" d="M66,18h-2v2h2V18z"/>
-		<path class="st5" d="M70.9,18H68v2h2.9H73v-2H70.9z"/>
-		<path class="st6" d="M68,18h-2v2h2V18z"/>
-		<path class="st7" d="M80.3,18H73v2h7.3H87v-2H80.3z"/>
+		<path class="st4" d="M65,18h-2v2h2V18z"/>
+		<path class="st5" d="M72.9,18H70v2h2.9H75v-2H72.9z"/>
+		<path class="st6" d="M67.9,18H65v2h2.9H70v-2H67.9z"/>
+		<path class="st7" d="M81.3,18H75v2h6.3H87v-2H81.3z"/>
 	</g>
 </svg>
 `)(pathTransformX(props.width))
