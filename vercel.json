@@ -1,4 +1,16 @@
 {
-	"rewrites": [{ "source": "/:address", "destination": "/api/[address]" }],
-	"redirects": [{ "source": "/api/:address", "destination": "/:address" }]
+	"rewrites": [
+		{
+			"source": "/:address/descriptive",
+			"destination": "/api/[address]/descriptive"
+		},
+		{ "source": "/:address", "destination": "/api/[address]/index" }
+	],
+	"redirects": [
+		{
+			"source": "/api/:address/descriptive",
+			"destination": "/:address/descriptive"
+		},
+		{ "source": "/api/:address", "destination": "/:address" }
+	]
 }

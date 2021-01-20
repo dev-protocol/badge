@@ -1,4 +1,4 @@
-import { fetchBalance } from './fetch-balance'
+import { fetchBalance } from '../lib/fetch-balance'
 import { svg } from './svg'
 import { NowRequest, NowResponse } from '@vercel/node'
 import { setHeader } from '../lib/set-header'
