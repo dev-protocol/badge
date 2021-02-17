@@ -38,7 +38,7 @@
 		"@types/bignumber.js": "5.0.0",
 		"@types/get-port": "4.2.0",
 		"@types/metric-suffix": "0.0.1",
-		"@types/mocha": "8.2.0",
+		"@types/mocha": "8.2.1",
 		"@types/node": "14.14.28",
 		"@types/node-fetch": "2.5.8",
 		"@types/sinon": "9.0.10",
