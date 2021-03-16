@@ -24,7 +24,7 @@
 	},
 	"homepage": "https://github.com/dev-protocol/badge#readme",
 	"dependencies": {
-		"@types/ramda": "0.27.38",
+		"@types/ramda": "0.27.39",
 		"@vercel/node": "1.9.1",
 		"bignumber.js": "9.0.1",
 		"graphql": "15.5.0",
