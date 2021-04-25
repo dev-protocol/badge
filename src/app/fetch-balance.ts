@@ -54,7 +54,7 @@ export const fetchBalance = async (
 			: addressFromPath[0]
 		: undefined
 	const balance = address
-		? await getBalanceByPropertyAddress(address)
+		? await getBalanceByPropertyAddress(address).catch(undefined)
 		: undefined
 	return balance
 		? balance?.data?.property_lockup_sum_values?.[0]?.sum_values /
