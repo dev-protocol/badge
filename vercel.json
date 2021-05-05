@@ -10,8 +10,8 @@
 	"redirects": [
 		{
 			"source": "/api/:address/descriptive",
-			"destination": "/:address/descriptive"
+			"destination": "/[address]/descriptive"
 		},
-		{ "source": "/api/:address", "destination": "/:address" }
+		{ "source": "/api/:address", "destination": "/[address]" }
 	]
 }
