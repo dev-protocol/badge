@@ -26,7 +26,7 @@
 	"dependencies": {
 		"@devprotocol/dev-kit": "4.4.1",
 		"@types/ramda": "0.27.40",
-		"@vercel/node": "1.10.0",
+		"@vercel/node": "1.11.0",
 		"bignumber.js": "9.0.1",
 		"metric-suffix": "0.0.3",
 		"ramda": "0.27.1",
