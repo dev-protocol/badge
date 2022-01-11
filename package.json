@@ -29,7 +29,7 @@
 		"@vercel/node": "1.12.1",
 		"bignumber.js": "9.0.2",
 		"metric-suffix": "0.0.3",
-		"ramda": "0.27.1",
+		"ramda": "0.27.2",
 		"string-pixel-width": "1.10.0",
 		"web3": "1.6.1"
 	},
