@@ -386,10 +386,10 @@
   resolved "https://registry.yarnpkg.com/@types/metric-suffix/-/metric-suffix-0.0.1.tgz#1527b101afd4be3af9d8abd1f15b800ba0b36288"
   integrity sha512-7CFBMFukxS/yDIwVnYdTVh2+LT+C+NOxRoWOEMU9Rj6FzFzQnZcyiuFwnBWPq/JeSzwVLKbDGRQEV3aA9Jy6vA==
 
-"@types/mocha@9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-9.0.0.tgz#3205bcd15ada9bc681ac20bef64e9e6df88fd297"
-  integrity sha512-scN0hAWyLVAvLR9AyW7HoFF5sJZglyBsbPuHO4fv7JRvfmPBMfp1ozWqOf/e4wwPNxezBZXRfWzMb6iFLgEVRA==
+"@types/mocha@9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-9.1.0.tgz#baf17ab2cca3fcce2d322ebc30454bff487efad5"
+  integrity sha512-QCWHkbMv4Y5U9oW10Uxbr45qMMSzl4OzijsozynUAgx3kEHUdXB00udx2dWDQ7f2TU2a2uuiFaRZjCe3unPpeg==
 
 "@types/node-fetch@3.0.2":
   version "3.0.2"
