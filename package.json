@@ -31,7 +31,7 @@
 		"metric-suffix": "0.0.3",
 		"ramda": "0.28.0",
 		"string-pixel-width": "1.10.0",
-		"web3": "1.7.0"
+		"web3": "1.7.1"
 	},
 	"devDependencies": {
 		"@types/bignumber.js": "5.0.0",
