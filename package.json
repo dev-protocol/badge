@@ -27,7 +27,7 @@
 		"@devprotocol/dev-kit": "4.7.0",
 		"@types/ramda": "0.28.15",
 		"@vercel/node": "2.5.7",
-		"bignumber.js": "9.0.2",
+		"bignumber.js": "9.1.0",
 		"metric-suffix": "0.0.3",
 		"ramda": "0.28.0",
 		"string-pixel-width": "1.10.0",
