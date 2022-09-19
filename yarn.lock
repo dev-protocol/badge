@@ -596,24 +596,24 @@
   resolved "https://registry.yarnpkg.com/@ungap/promise-all-settled/-/promise-all-settled-1.1.2.tgz#aa58042711d6e3275dd37dc597e5d31e8c290a44"
   integrity sha512-sL/cEvJWAnClXw0wHk85/2L0G6Sj8UB0Ctc1TEMbKSsmpRosqhwj9gWgFRZSrBr2f9tiXISwNhCPmlfqUqyb9Q==
 
-"@vercel/build-utils@5.4.2":
-  version "5.4.2"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-5.4.2.tgz#7bd0b8b87618b729bfc0fe9b35afc54a9ecd0b0e"
-  integrity sha512-KUM+b5/G5s5f3VWuNREXKnOPP+NdHFdXaNf9yHstJHE0QndFB/7RUNYiOU7F0/8wJHgkUvSuxydFAq5ROOBsiQ==
+"@vercel/build-utils@5.4.3":
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-5.4.3.tgz#aa4c7c9b85595c011a2e112a850f14bc8a8849cf"
+  integrity sha512-EcxiOWf50lWIHlUqC5f6AV6A6A1zAXzdCgtHgvp4X+FcAwHVpbVwNbmpSVXKhKoKcLzfSbxYxupX/lD8nulmuA==
 
 "@vercel/node-bridge@3.0.0":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-3.0.0.tgz#443655b74713ec65531726fb5a30c5c528c804bf"
   integrity sha512-TNQK6cufwrhd8ASDk5YHHenH8Xhp9sY8xUjOTKnQQI37KLk+Sw2HlHhT5rzUFN23ahosUlkY8InwtYUmSNb9kw==
 
-"@vercel/node@2.5.14":
-  version "2.5.14"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.5.14.tgz#d36be89c35f9ca2dc10af8361d0a089e04ea0d5f"
-  integrity sha512-JXhxM9tiAIxAS+rZcoo7VquOBqzWlC83h9ZLdzkHdO39GGmHyrCCnmQJooffaBr1QYuDXfJhMHBp7QWqEVsarw==
+"@vercel/node@2.5.15":
+  version "2.5.15"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.5.15.tgz#b9f67a76d3404818bb28bc43f5580d668bfaaa62"
+  integrity sha512-GWaOMsBUF+5STyLWCc0eI6hFUkUxMW2ka1iuiiWKMFSwwrAg01/H5++iyVpBpMJcncurwHF8CDZpKGbD9NZj2w==
   dependencies:
     "@edge-runtime/vm" "1.1.0-beta.32"
     "@types/node" "*"
-    "@vercel/build-utils" "5.4.2"
+    "@vercel/build-utils" "5.4.3"
     "@vercel/node-bridge" "3.0.0"
     "@vercel/static-config" "2.0.3"
     edge-runtime "1.1.0-beta.32"
