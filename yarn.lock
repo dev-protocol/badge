@@ -606,10 +606,10 @@
   resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-3.0.0.tgz#443655b74713ec65531726fb5a30c5c528c804bf"
   integrity sha512-TNQK6cufwrhd8ASDk5YHHenH8Xhp9sY8xUjOTKnQQI37KLk+Sw2HlHhT5rzUFN23ahosUlkY8InwtYUmSNb9kw==
 
-"@vercel/node@2.5.16":
-  version "2.5.16"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.5.16.tgz#7de850c4a6bfe8ca06d3832cf5d86d36e85e1e13"
-  integrity sha512-0nFFL4oQqXBQC710x3OXp2x5Np1M40CWXPzubv00c7XnvzVJVmoBPUjPGoJ3Bpfu/1m6cpWEePgEe+Z8A2aKaw==
+"@vercel/node@2.5.17":
+  version "2.5.17"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-2.5.17.tgz#54f15cd9424f2896c7898436c26a0d5cd2ecd440"
+  integrity sha512-EVg2PyBZrAbEL60GbRry8TnCvrCVC02fD1MLdU95kprbeOuI5OilWF6YIFhZyh262Y54semWyuInNe/sfRI73Q==
   dependencies:
     "@edge-runtime/vm" "1.1.0-beta.32"
     "@types/node" "*"
