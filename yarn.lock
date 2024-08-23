@@ -937,10 +937,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/metric-suffix@0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@types/metric-suffix/-/metric-suffix-0.0.1.tgz#1527b101afd4be3af9d8abd1f15b800ba0b36288"
-  integrity sha512-7CFBMFukxS/yDIwVnYdTVh2+LT+C+NOxRoWOEMU9Rj6FzFzQnZcyiuFwnBWPq/JeSzwVLKbDGRQEV3aA9Jy6vA==
+"@types/metric-suffix@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@types/metric-suffix/-/metric-suffix-0.0.3.tgz#bd516a82f58e8b42513f6730d0893a912f2819db"
+  integrity sha512-JbFgVDI5UgBpcRMdd916pcxFKj7nqVi+lM2QY2IZ9rgRQuLS+eGF38owW4UV9/Kpsq+bEKolPIHuBUcBHW5RWA==
 
 "@types/mkdirp@^0.5.2":
   version "0.5.2"
