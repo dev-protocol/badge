@@ -877,10 +877,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/bignumber.js@5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@types/bignumber.js/-/bignumber.js-5.0.0.tgz#d9f1a378509f3010a3255e9cc822ad0eeb4ab969"
-  integrity sha512-0DH7aPGCClywOFaxxjE6UwpN2kQYe9LwuDQMv+zYA97j5GkOMo8e66LYT+a8JYU7jfmUFRZLa9KycxHDsKXJCA==
+"@types/bignumber.js@5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@types/bignumber.js/-/bignumber.js-5.0.4.tgz#389fcb43181f016cd8666e6511e32fc6a6e1f40a"
+  integrity sha512-y/nRKmgKRakrBZ4B3/1mhZOEHrKcf6BniqxVlsVrmaG6fN6WzzUlXfsD+KX+Ii4C+093A7h1p6LkOsXktOfQnQ==
   dependencies:
     bignumber.js "*"
 
