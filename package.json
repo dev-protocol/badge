@@ -30,7 +30,7 @@
 		"bignumber.js": "9.3.1",
 		"metric-suffix": "0.0.3",
 		"ramda": "0.28.0",
-		"string-pixel-width": "1.10.0",
+		"string-pixel-width": "1.11.0",
 		"web3": "1.8.0"
 	},
 	"devDependencies": {
