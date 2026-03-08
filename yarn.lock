@@ -8068,10 +8068,10 @@ strict-uri-encode@^1.0.0:
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
   integrity sha1-J5siXfHVgrH1TmWt3UNS4Y+qBxM=
 
-string-pixel-width@1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/string-pixel-width/-/string-pixel-width-1.10.0.tgz#aff215aaa7a65627f937d70fcc88d83ae1bc5657"
-  integrity sha512-cOMpkH+CpxWAnrPsWUvPWhZxh25CzUukweT+6WF+Kwx6+G2ksg8flvELZusLyWiZzfFCjj1+QRRGwcPWZlwVYA==
+string-pixel-width@1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/string-pixel-width/-/string-pixel-width-1.11.0.tgz#c710eb767427f21154fb823aed2ea5ed83239976"
+  integrity sha512-GeKuNcCza7Gf3tlMJiZY8SF1LtbFGeMUEpHifncgJn+ZcUpnoPyE69HEyb0rXrJ3bejY/M/kBylu7IDlPJD9Ng==
   dependencies:
     lodash.deburr "^4.1.0"
 
