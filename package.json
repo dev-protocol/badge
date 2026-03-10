@@ -47,7 +47,7 @@
 		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-functional": "9.0.4",
 		"eslint-plugin-prettier": "5.5.5",
-		"mocha": "10.8.2",
+		"mocha": "11.7.5",
 		"prettier": "2.8.8",
 		"sinon": "14.0.2",
 		"typescript": "4.9.5"
