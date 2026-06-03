@@ -1414,10 +1414,10 @@ eslint-config-prettier@10.1.8:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-10.1.8.tgz#15734ce4af8c2778cc32f0b01b37b0b5cd1ecb97"
   integrity sha512-82GZUjRS0p/jganf6q1rEO25VSoHH0hKPCTrgillPjdI/3bgBhAE1QzHrHTizjpRvy6pGAvKjDJtk2pF9NDq8w==
 
-eslint-plugin-functional@9.0.5:
-  version "9.0.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-functional/-/eslint-plugin-functional-9.0.5.tgz#e76d582beaead0b5b9e429eb9249cd8317f5a20d"
-  integrity sha512-RYbNpGkGu5mSN7xlezyeE7TE3S9rsliAS5FOorZoxn7126UTslcQnoVOIAOA6fMOlz6dNG3x3cd3tuzrHM6mRA==
+eslint-plugin-functional@10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-functional/-/eslint-plugin-functional-10.0.0.tgz#dc23dad1ebb23146811981fb67dbc0b69be46877"
+  integrity sha512-D/BWdGUvPz5uIC+kZM1BWrELhjHpDiYxIYjzF7a6TZ62KINajjKgOiSYGbGv4fpMT1enEC9yG+0kOaIRTZzpTg==
   dependencies:
     "@typescript-eslint/utils" "^8.26.0"
     deepmerge-ts "^7.1.5"
